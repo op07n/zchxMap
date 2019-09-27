@@ -64,4 +64,4 @@ before_build:
 
 build_script:
   - qmake zchxMapTile.pro
-  - nmake /f Makefile.Debug  
+  - nmake /f Makefile
