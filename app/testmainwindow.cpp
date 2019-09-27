@@ -1,7 +1,7 @@
 #include "testmainwindow.h"
 #include "ui_testmainwindow.h"
 #include <QDateTime>
-#include "zchxutils.hpp"
+#include "../zchx_ecdis/zchxutils.hpp"
 #include "../zchx_ecdis/element/fixelement.h"
 #include "../zchx_ecdis/element/aiselement.hpp"
 
