@@ -2,8 +2,8 @@
 #define TESTMAINWINDOW_H
 
 #include <QMainWindow>
-#include "qt/mainwindow.h"
-#include "qt/map_layer/zchxMapLayer.h"
+#include "mainwindow.h"
+#include "map_layer/zchxMapLayer.h"
 
 namespace Ui {
 class TestMainWindow;
