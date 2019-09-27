@@ -7,6 +7,15 @@
 PSFW_3RDPARTYPATH = $${PWD}/3rdParty
 IDE_APP_PATH = $$dirname(PWD)/bin
 
+
+
+
+QMAKE_LIBDIR += C:/zchxMapTile/out/Release
+
+
+
+
+
 include($$PSFW_3RDPARTYPATH/zchx_ecdis/zchx_ecdis.pri)
 
 QT       += core gui
