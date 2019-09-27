@@ -39,7 +39,7 @@ environment:
 
 
 configuration:
-  - Release
+  - Debug
 
 install:
   - set PATH=%QTDIR%\bin;%PATH%
@@ -64,4 +64,4 @@ before_build:
 
 build_script:
   - qmake zchxMapTile.pro
-  - nmake /f makefile.vc  
+  - nmake /f Makefile.Debug  
