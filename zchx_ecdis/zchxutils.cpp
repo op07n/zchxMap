@@ -1169,6 +1169,8 @@ SpecialRouteLine &SpecialRouteLine::operator=(const SpecialRouteLine &other)
     m_sOperator = other.m_sOperator;
     m_dMainSeaCable = other.m_dMainSeaCable;
     points = other.points;
+   
+    return *this;   // <-----------------------------------
 }
 
 SpecialRoutePoint::SpecialRoutePoint()
@@ -1198,6 +1200,8 @@ SpecialRoutePoint &SpecialRoutePoint::operator=(const SpecialRoutePoint &other)
     m_dResistSnchorWeight = other.m_dResistSnchorWeight;  //抗击锚重（kg）
     m_sRiprapProtection = other.m_sRiprapProtection;
     m_sRemarks =  other.m_sRemarks;
+   
+    return *this;   // <-----------------------------------
 }
 
 bool tagITF_ChannelLine::operator ==(const tagITF_ChannelLine &other)
