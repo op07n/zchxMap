@@ -231,7 +231,7 @@ void MainWindow::itfSetAisData(const QList<ZCHX::Data::ITF_AIS> &data)
     MapLayerMgr::instance()->getAisLayer()->setAisData(data, true);
 }
 
-bool MainWindow::itfSetSingleAisData(QString id, const QList<ZCHX::Data::ITF_AIS> &data)
+void MainWindow::itfSetSingleAisData(QString id, const QList<ZCHX::Data::ITF_AIS> &data)
 {
     MapLayerMgr::instance()->getAisLayer()->setSingleAisData(id, data);
 }
