@@ -2,7 +2,7 @@
 #define TESTMAINWINDOW_H
 
 #include <QMainWindow>
-#include "mainwindow.h"
+#include "../zchx_ecdis/mainwindow.h"
 #include "../zchx_ecdis/map_layer/zchxMapLayer.h"
 
 namespace Ui {
