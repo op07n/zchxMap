@@ -6,7 +6,9 @@ ZCHX_ECDIS_VERSION     = 3.0.0
 ######################################################################
 QT       += core gui network positioning core_private opengl svg xml
 
-ZCHX_ECDIS_PATH = $${PSFW_3RDPARTYPATH}/$${ZCHX_ECDIS_NAME}/$${ZCHX_ECDIS_VERSION}
+# ZCHX_ECDIS_PATH = $${PSFW_3RDPARTYPATH}/$${ZCHX_ECDIS_NAME}/$${ZCHX_ECDIS_VERSION}
+
+ZCHX_ECDIS_PATH = $${PSFW_3RDPARTYPATH}/$${ZCHX_ECDIS_NAME}
 
 exists( $${ZCHX_ECDIS_PATH} ) {
     ######################################################################
