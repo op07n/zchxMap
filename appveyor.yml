@@ -26,14 +26,12 @@ environment:
   matrix:
   - id: msvc-x86
     APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-    VCVAR2017: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat'
     platform: x86
     compiler: msvc-15
     generator: "Visual Studio 15 2017"
     QTDIR: "C:\\Qt\\5.13.0\\msvc2017"
   - id: msvc-x64
     APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-    VCVAR2017: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat'
     platform: x64
     compiler: msvc-15
     generator: "Visual Studio 15 2017 Win64"
@@ -56,7 +54,8 @@ matrix:
 
 # BUILD CONFIGURATION #
 before_build:
-- call %VCVAR2017%
+- if "%PLATFORM%"=="x86" call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
+- if "%PLATFORM%"=="x64" call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
 - cd c:\%PROJECT_NAME%
     
     
