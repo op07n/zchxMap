@@ -1,9 +1,9 @@
 #include "testmainwindow.h"
 #include "ui_testmainwindow.h"
 #include <QDateTime>
-#include "qt/zchxutils.hpp"
-#include "qt/element/fixelement.h"
-#include "qt/element/aiselement.hpp"
+#include "zchxutils.hpp"
+#include "element/fixelement.h"
+#include "element/aiselement.hpp"
 
 TestMainWindow::TestMainWindow(QWidget *parent) :
     QMainWindow(parent),
