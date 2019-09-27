@@ -1,4 +1,4 @@
-#include "../zchx_ecdis/testmainwindow.h"
+#include "testmainwindow.h"
 #include "ui_testmainwindow.h"
 #include <QDateTime>
 #include "zchxutils.hpp"
