@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "mainwindow.h"
-#include "map_layer/zchxMapLayer.h"
+#include "../zchx_ecdis/map_layer/zchxMapLayer.h"
 
 namespace Ui {
 class TestMainWindow;
