@@ -437,7 +437,7 @@ public slots: //定义Recive数据接口
 
     void itfSetRadarEchoData(const QMap<QDateTime,ZCHX::Data::ITF_RadarEchoMap> &data); //设置雷达回波数据
     void itfSetAisData(const QList<ZCHX::Data::ITF_AIS> &data); //设置AIS轨迹数据
-    bool itfSetSingleAisData(QString id, const QList<ZCHX::Data::ITF_AIS> &data);//设置历史轨迹
+    void itfSetSingleAisData(QString id, const QList<ZCHX::Data::ITF_AIS> &data);//设置历史轨迹
     void itfRemoveAisHistoryData(QString id);//删除历史轨迹
     void itfSetHistoryAisData(const QList<ZCHX::Data::ITF_AIS> &data); //设置历史AIS数据
     void itfSetClearHistoryData(bool states);               //true-清理历史ais/radatr  false-清理历史轨迹
