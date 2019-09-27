@@ -22,23 +22,22 @@ clone_depth: 5
 environment:
   PROJECT_NAME: zchxMapTile
   
-  VCVAR2017: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat'
-  
   
   matrix:
   - id: msvc-x86
     APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    VCVAR2017: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat'
     platform: x86
     compiler: msvc-15
     generator: "Visual Studio 15 2017"
     QTDIR: "C:\\Qt\\5.13.0\\msvc2017"
   - id: msvc-x64
     APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    VCVAR2017: 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat'
     platform: x64
     compiler: msvc-15
     generator: "Visual Studio 15 2017 Win64"
     QTDIR: "C:\\Qt\\5.13.0\\msvc2017_64"
-
 
 
 configuration:
@@ -57,22 +56,8 @@ matrix:
 
 # BUILD CONFIGURATION #
 before_build:
-
-- ps: |
-    # ...example script to set the proper flags for vcvarsall ...
-    # syntax: vcvarsall.bat [architecture] [platform_type] [winsdk_version] [-vcvars_ver=vcversion]
-    $Architecture = $env:PLATFORM # simplified, works for x86 and x64
-    if ("$env:APPVEYOR_BUILD_WORKER_IMAGE" -eq "Visual Studio 2015") {
-      $env:VCVARSALL = "`"$env:VCVAR2015`" $Architecture"
-    } else {
-      $env:VCVARSALL = "`"$env:VCVAR2017`" $Architecture"
-    }
-- call %VCVARSALL%
-
-
-
-
-    - cd c:\%PROJECT_NAME%
+- call %VCVAR2017%
+- cd c:\%PROJECT_NAME%
     
     
     
