@@ -10,7 +10,7 @@ IDE_APP_PATH = $$dirname(PWD)/bin
 
 
 
-QMAKE_LIBDIR += C:/zchxMapTile/out/Release
+QMAKE_LIBDIR += C:/zchxmaptile/zchx_ecdis/out/Release
 
 
 
